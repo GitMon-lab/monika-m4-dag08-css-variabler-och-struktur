@@ -1,0 +1,149 @@
+/* CSS för : knapp, kort, formulär */
+
+/**********          Kort          */
+section {
+    margin-bottom: 40px;
+}
+/**********      Section  hero     Nybakat      */
+#hero {
+    background-color: #f3e3cf;
+    padding: 32px 24px;
+    border-radius: 8px;
+}
+
+#hero p {
+    font-size: 1.125rem;
+    max-width: 60ch;
+}
+
+/**********      Section  meny           */
+article {
+    /* background-color: #ffffff; */
+    background-color: Var(--background-article);
+    border: 1px solid #e3d5c3;
+
+    border-radius: Var(--space-1);
+    /* border-radius: 8px; */
+
+    padding: Var(--space-2);
+    /* padding: 16px; */
+
+    margin-bottom: Var(--space-2);
+    /* margin-bottom: 16px; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+article .pris {
+    margin-top: auto;
+}
+
+.meny-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.meny-lista article {
+    margin-bottom: 0;
+}
+
+/**********      Section  om-oss           */
+
+#om-oss {
+    display: grid;
+    /*grid-template-columns: 1fr;*/
+
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    /* gap: 8px 32px; */
+    gap: Var(--space-1) Var(--space-4);
+}
+#om-oss h2 {
+    grid-column: 1 / -1;
+}
+
+#om-oss img {
+    grid-row: 2 / span 2;
+    grid-column: 2;
+}
+
+article img,
+#om-oss img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/**********          Knapp          */
+.knapp {
+    display: inline-block;
+    /*   background-color: #8c1010; */
+    background-color: Var(--button-background);
+    /*  color: #ffffff; */
+    color: Var(--color-font-light);
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.knapp:hover {
+    background-color: #6f0c0c;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #1a73e8;
+    outline-offset: 2px;
+}
+
+/********           Formulär               */
+.falt,
+.val {
+    margin-bottom: Var(--space-2);
+    /* margin-bottom: 16px; */
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.val label {
+    display: inline;
+    font-weight: 400;
+    /* margin-left: 8px; */
+    margin-left: Var(--space-1);
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='date'],
+select,
+textarea {
+    width: 100%;
+    max-width: 28rem;
+    padding: 10px 12px;
+    border: 2px solid #8a7a6a;
+    border-radius: 6px;
+    font: inherit;
+}
+
+fieldset {
+    border: 1px solid #e3d5c3;
+    border-radius: 8px;
+    margin: 0 0 16px;
+    padding: 12px 16px;
+}
+
+legend {
+    font-weight: 700;
+    padding: 0 8px;
+}

@@ -1,0 +1,89 @@
+/* CSS för : header, main, grid, footer, media queries */
+
+/*********              main             */
+main {
+    padding: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/*********              header             */
+header {
+    /*  background-color: #5b3a29;*/
+    background-color: Var(--background-header);
+
+    /* color: #ffffff; */
+    color: Var(--color-font-light);
+    /* padding: 16px 24px; */
+    padding: Var(--space--1) Var(--space--3);
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 8px 24px; */
+    gap: Var(--space--1) Var(--space--3);
+}
+
+header h1 {
+    margin: 0;
+}
+
+/*********              footer             */
+
+footer {
+    background-color: #2b1c14;
+    /*   color: #ffffff; */
+    color: Var(--color-font-light);
+    /* padding: 24px; */
+    padding: Var(--space-3);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* gap: 16px; */
+    gap: Var(--space-2);
+}
+
+footer a {
+    /* color: #ffffff; */
+    color: Var(--color-font-light);
+}
+
+address {
+    font-style: normal;
+}
+
+/* ===== Dag 7: Responsiv design (mobile first) ===== */
+@media (min-width: 600px) {
+    main {
+        /* padding: 32px; */
+        padding: Var(--space-4);
+    }
+
+    #hero {
+        padding: 56px 40px;
+    }
+
+    #hero h2 {
+        font-size: 2.25rem;
+    }
+}
+
+@media (min-width: 900px) {
+    #om-oss {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    #om-oss img {
+        grid-row: 2 / span 2;
+        grid-column: 2;
+    }
+
+    header {
+        padding: 20px 48px;
+    }
+}
