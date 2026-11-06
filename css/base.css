@@ -23,7 +23,7 @@ body {
     /*   background-color: #fffaf3;*/
     background-color: Var(--background-body);
     /* font-size: 1rem; */
-    font-size: Var(--size-2);
+    font-size: Var(--space-2);
     line-height: 1.6;
 }
 
@@ -55,9 +55,6 @@ h2 {
 h3 {
     font-size: 1.25rem;
     margin: 12px 0 8px;
-}
-#om-oss h2 {
-    grid-column: 1 / -1;
 }
 
 .pris {
